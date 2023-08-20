@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  font-weight: 300;
+:root{
+  --bgcolor: #010409;
+  --primary: #343b42;
+  --secondary: #6A5ACD;
 }
 
 img {
@@ -11,7 +11,7 @@ img {
 }
 
 body {
-  background-color:#24292e;
+  background-color: var(--bgcolor);
   font-family: "Kumbh Sans", sans-serif;  
   text-align: center;    
   padding-bottom: 100px;
@@ -77,10 +77,11 @@ main {
   border-radius: 7px;  
   cursor: pointer;
   border: 1px solid grey;
+  transition: 0.3s ease-in-out;
 }
 
 .container header #btn-search:hover {
-  background-color: hotpink;
+  background-color: var(--primary);
   color: #ffffff;
   border-color: #ffffff;
 }
@@ -107,13 +108,18 @@ main {
 .container .profile-data .info img{
   width: 50%;
   border-radius: 50%;
-  border: 10px solid hotpink;
+  border: 10px solid var(--primary);
 }
 
 .container .profile-data .info h1{
   font-size: 25px;
   margin-bottom: 20px;
   font-weight: 700;
+  transition: 0.3s ease-in-out;
+}
+
+.container .profile-data .info h1:hover{
+  font-size: 26px;
 }
 
 .container .profile-data .info p{
@@ -172,15 +178,16 @@ main {
 }
 
 .container .profile-data .repositories ul li a span{
-  background-color: #6A5ACD;
-  color: #fff;
+  background-color: var(--secondary);
+  color: #ffffff;
   padding: 3px;
   border-radius: 5px;
 }
 
 .container .profile-data .repositories ul li a:hover{
-  background-color:hotpink;
-  color: #fff
+  background-color:var(--primary);
+  color: #ffffff;
+  padding: 25px;
 }
 
 .container .profile-data .events h2{
