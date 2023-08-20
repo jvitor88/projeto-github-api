@@ -6,7 +6,7 @@
 
 Desafio do curso DevQuest, onde foi solicitado a criação de uma page que busca os dados dos usuários do Github através de uma api. 
 
-Acesse pelo link do GitPages ➡️ <a href="[#](https://jvitor88.github.io/projeto-github-api/)" target="_blank">Projeto-API-Github</a> 
+Acesse pelo link do GitPages ➡️ <a href="https://jvitor88.github.io/projeto-github-api/" target="_blank">Projeto-API-Github</a> 
 
 
  ### Minhas redes: 
