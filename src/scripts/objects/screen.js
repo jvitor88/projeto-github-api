@@ -4,7 +4,7 @@ const screen = {
         this.userProfile.innerHTML = `<div class="info">
                                         <img class="profile-photo" src="${user.avatarUrl}" alt="Foto de perfil do usuário">
                                         <div class="data">
-                                            <h1>${user.name ?? 'Não possui nome cadastrado'}</h1>
+                                        <a href="${user.profile}" target="_blank"><h1>${user.name ?? 'Não possui nome cadastrado'}</h1></a>
                                             <p>${user.bio ?? 'Não possui bio cadastrada'}</p>
                                             <div class="follows">
                                                 <p>👥Seguidores: <span>${user.followers}</span></p>

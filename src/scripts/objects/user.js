@@ -3,6 +3,7 @@ const user = {
     name: '',
     bio: '',
     userName: '',
+    profile: '',
     followers: '',
     following: '',
     repositories: [],
@@ -12,6 +13,7 @@ const user = {
         this.name = githubUser.name
         this.bio = githubUser.bio
         this.userName = githubUser.userName
+        this.profile = githubUser.html_url
         this.followers = githubUser.followers
         this.following = githubUser.following
     },
