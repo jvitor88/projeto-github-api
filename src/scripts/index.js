@@ -1,34 +1,41 @@
-let searchName = document.querySelector('#input-search')
-let profileData = document.querySelector('.profile-data')
-let profileImage = document.querySelector('.profile-photo')
-let profileName = document.querySelector('.name')
-let profileBio = document.querySelector('.bio')
+import { getUser } from "./services/user.js"
+import { getRepositories } from "./services/repositories.js"
+import { getEvents } from "./services/events.js"
+import { user } from "./objects/user.js"
+import { screen } from "./objects/screen.js"
 
-const button = document.querySelector('#btn-search').addEventListener("click", () => getUser(searchName.value.toLowerCase()))
+document.querySelector('#btn-search').addEventListener("click", () => {
+    const userName = document.querySelector('#input-search').value.toLowerCase()
+    if(validateEmptyInput(userName)) return
+    getUserData(userName)
+})
+document.getElementById('input-search').addEventListener("keypress", (click) => {
+    if(click.key === 'Enter'){
+        const userName = document.querySelector('#input-search').value.toLowerCase()
+        if(validateEmptyInput(userName)) return
+        getUserData(userName)
+    }
+})
 
-// async function getUser(name){
-//     const response = await fetch(`https://api.github.com/users/${name}`)
-//     return await response.json()
-// }
+async function getUserData(userName){
+    const userResponse = await getUser(userName)
+    const repositoriesResponse = await getRepositories(userName)
+    const eventsResponse = await getEvents(userName)
+    console.log(eventsResponse)
+    if(userResponse.message === 'Not Found'){
+        screen.renderNotFound()
+        return
+    }   
 
-// async function getRepos(name){
-//     const response = await fetch(`https://api.github.com/users/${name}/repos`)
-//     return await response.json()
-// }
+    user.setInfo(userResponse)
+    user.setRepositories(repositoriesResponse)
+    user.setEvents(eventsResponse)
+    screen.renderUser(user)
+    }
 
-async function getUser(name){
-    const response = await fetch(`https://api.github.com/users/${name}`)
-    const user = await response.json()
-    profileImage.setAttribute("src", user.avatar_url)
-    profileName.innerHTML = `${user.name ?? 'Não possui nome cadastrado'}`
-    profileBio.innerHTML = `${user.bio ?? 'Não possui bio cadastrada'}`
-    profileData.classList.remove('hide')
+function validateEmptyInput(userName){
+    if(userName.length === 0) {
+        alert('Preencha o campo com o nome do usuário do GitHub')
+        return true
+    }
 }
-
-// async function getUser(name){
-//     const response = await fetch(`https://api.github.com/users/${name}/repos`)
-//     const user = await response.json()
-//     profileImage.setAttribute("src", user.avatar_url)
-//     profileName.innerHTML = `${user.name ?? 'Não possui nome cadastrado'}`
-//     profileBio.innerHTML = `${user.bio ?? 'Não possui bio cadastrada'}`
-// }

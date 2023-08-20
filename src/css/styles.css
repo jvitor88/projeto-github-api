@@ -122,10 +122,24 @@ main {
   line-height: 23px;
 }
 
+.container .profile-data .info .follows{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+  font-size: 15px;  
+  font-weight: 400;
+}
+
+.container .profile-data .info .follows span{
+  font-weight: 700;
+}
+
 /* REPOSITORIES */
 
 .container .profile-data .repositories h2{
-  margin-bottom: 30px;
+  margin: 30px 0px;
   text-align: center;
 }
 
@@ -144,13 +158,42 @@ main {
   transition: 0.3s ease-in-out;
 }
 
+.container .profile-data .repositories ul li a h3{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.container .profile-data .repositories ul li a div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.container .profile-data .repositories ul li a span{
+  background-color: #6A5ACD;
+  color: #fff;
+  padding: 3px;
+  border-radius: 5px;
+}
+
 .container .profile-data .repositories ul li a:hover{
   background-color:hotpink;
   color: #fff
 }
 
-.container .profile-data.hide{
-  display: none;
+.container .profile-data .events h2{
+  margin: 30px 0px;
+  text-align: center;
+}
+
+.container .profile-data .events li{
+  line-height: 30px;
+}
+
+.container .profile-data .events span{
+  font-weight: 700;
 }
 
 @media (max-width: 1280px) {
