@@ -1,7 +1,6 @@
-import { baseUrl } from "/src/scripts/variables.js"
 
 async function getUser(name){
-    const response = await fetch(`${baseUrl}/${name}`)
+    const response = await fetch(`https://api.github.com/users/${name}`)
     return await response.json()
 }
 

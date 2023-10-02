@@ -1,7 +1,6 @@
-import { baseUrl, repositoriesQuantity } from "/src/scripts/variables.js"
 
 async function getRepositories(name){
-    const response = await fetch(`${baseUrl}/${name}/repos?per_page=${repositoriesQuantity}`)
+    const response = await fetch(`https://api.github.com/users/${name}/repos?per_page=10`)
     return await response.json()
 }
 

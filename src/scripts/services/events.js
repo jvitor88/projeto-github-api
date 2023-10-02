@@ -1,7 +1,6 @@
-import { baseUrl, repositoriesQuantity } from "/src/scripts/variables.js"
 
 async function getEvents(name){
-    const response = await fetch(`${baseUrl}/${name}/events?per_page=${repositoriesQuantity}`)
+    const response = await fetch(`https://api.github.com/users/${name}/events?per_page=10`)
     return await response.json()
 }
 
