@@ -1,10 +1,19 @@
-<h1>Projeto Fetch com API do Github</h1>
+# Projeto Fetch com API do Github
 
-<p float="left">
+<img src="https://uploaddeimagens.com.br/images/004/625/125/full/asdasda.PNG?1696282567" width="400" />
 
- <img src="https://media.licdn.com/dms/image/C4D0BAQG9RVtXwXXxfQ/company-logo_200_200/0/1663864652170?e=1698883200&v=beta&t=hLoRo_er494W3gUxcapb9eR97zHD-xp2zobEl7fClUA" width="200" />
+## Objetivo:
 
-Desafio do curso DevQuest, onde foi solicitado a criação de uma page que busca os dados dos usuários do Github através de uma api. 
+Aplicação criada se baseando desafio do curso DevQuest, onde foi solicitado a criação de uma page que busca os dados dos usuários do Github através de uma api. 
+
+## Foi utilizado:
+
+- JavaScript;
+- API do GitHub;
+
+## Link da Aplicação
+
+ 
 
  ### Minhas redes: 
 
