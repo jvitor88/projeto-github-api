@@ -11,10 +11,6 @@ Aplicação criada se baseando desafio do curso DevQuest, onde foi solicitado a 
 - JavaScript;
 - API do GitHub;
 
-## Link da Aplicação
-
- 
-
  ### Minhas redes: 
 
 <div>
