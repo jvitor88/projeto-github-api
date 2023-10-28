@@ -11,7 +11,11 @@ Aplicação criada se baseando desafio do curso DevQuest, onde foi solicitado a 
 - JavaScript;
 - API do GitHub;
 
- ### Minhas redes: 
+## Link do Projeto:
+
+👉 <a href="https://jvitor88.github.io/projeto-github-api/" target="_blank">Clique Aqui</a>
+
+### Minhas redes: 
 
 <div>
   <a href="https://www.linkedin.com/in/jose-silveira-ti/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
